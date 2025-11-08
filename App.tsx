@@ -5,14 +5,12 @@ import { checkAndResetRenewals } from './utils/renewalUtils';
 import ServiceList from './components/ServiceList';
 import AddServiceModal from './components/AddServiceModal';
 import { PlusIcon, SunIcon, MoonIcon, LogoIcon } from './components/icons';
-import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App: React.FC = () => {
   const [services, setServices] = useState<ServiceEntry[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingService, setEditingService] = useState<ServiceEntry | null>(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [view, setView] = useState<'main' | 'privacy'>('main');
 
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -108,29 +106,21 @@ const App: React.FC = () => {
       </header>
 
       <main className="container mx-auto p-4 md:p-6 flex-grow">
-        {view === 'main' && (
-          <ServiceList 
-            services={sortedServices} 
-            onToggleUsed={handleToggleUsed} 
-            onDelete={handleDeleteService} 
-            onEdit={handleEditService}
-          />
-        )}
-        {view === 'privacy' && (
-          <PrivacyPolicy onBack={() => setView('main')} />
-        )}
+        <ServiceList 
+          services={sortedServices} 
+          onToggleUsed={handleToggleUsed} 
+          onDelete={handleDeleteService} 
+          onEdit={handleEditService}
+        />
       </main>
 
-      {view === 'main' && (
-        <button
-          onClick={openAddModal}
-          className="fixed bottom-20 right-8 bg-primary hover:bg-indigo-700 text-white rounded-full p-4 shadow-lg transform hover:scale-110 transition-transform duration-200 z-20"
-          aria-label="Add new service"
-        >
-          <PlusIcon />
-        </button>
-      )}
-
+      <button
+        onClick={openAddModal}
+        className="fixed bottom-20 right-8 bg-primary hover:bg-indigo-700 text-white rounded-full p-4 shadow-lg transform hover:scale-110 transition-transform duration-200 z-20"
+        aria-label="Add new service"
+      >
+        <PlusIcon />
+      </button>
 
       <AddServiceModal
         isOpen={isModalOpen}
@@ -140,9 +130,9 @@ const App: React.FC = () => {
       />
 
       <footer className="w-full text-center p-4 text-sm text-gray-500 dark:text-gray-400">
-        <button onClick={() => setView('privacy')} className="hover:underline">
+        <a href="/privacy.html" className="hover:underline">
           Privacy Policy
-        </button>
+        </a>
       </footer>
     </div>
   );

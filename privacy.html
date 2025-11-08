@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cdefs%3e%3clinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3e%3cstop offset='0%25' stop-color='%234f46e5'/%3e%3cstop offset='100%25' stop-color='%2310b981'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath d='M128 24.6C72.2 24.6 24.6 72.2 24.6 128s47.6 103.4 103.4 103.4 103.4-47.6 103.4-103.4' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='m211.7 74.5 19.7 53.5-49.2 19.7' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='M128 82.1 147.7 128 128 173.9 108.3 128z' fill='%234f46e5'/%3e%3c/svg%3e" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - FreebieFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#4f46e5',
+              'secondary': '#10b981',
+              'light': '#f3f4f6',
+              'dark': '#1f2937',
+              'accent': '#ec4899',
+            },
+            animation: {
+              'fade-in': 'fade-in 0.3s ease-out',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(10px)'
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)'
+                },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-light dark:bg-dark">
+    <div id="root"></div>
+    <script type="module" src="/privacy.tsx"></script>
+  </body>
+</html>
