@@ -1,17 +1,18 @@
-
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ServiceEntry } from './types';
 import { getServices, saveServices } from './services/storageService';
 import { checkAndResetRenewals } from './utils/renewalUtils';
 import ServiceList from './components/ServiceList';
 import AddServiceModal from './components/AddServiceModal';
-import { PlusIcon, SunIcon, MoonIcon } from './components/icons';
+import { PlusIcon, SunIcon, MoonIcon, LogoIcon } from './components/icons';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App: React.FC = () => {
   const [services, setServices] = useState<ServiceEntry[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingService, setEditingService] = useState<ServiceEntry | null>(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [view, setView] = useState<'main' | 'privacy'>('main');
 
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -91,34 +92,45 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-light dark:bg-dark text-dark dark:text-light transition-colors duration-300">
+    <div className="min-h-screen bg-light dark:bg-dark text-dark dark:text-light transition-colors duration-300 flex flex-col">
       <header className="bg-white dark:bg-gray-800 shadow-md p-4 sticky top-0 z-10">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-bold text-primary dark:text-indigo-400 tracking-tight">
-            FreebieFlow
-          </h1>
+          <div className="flex items-center gap-3">
+            <LogoIcon className="h-8 w-8" />
+            <h1 className="text-2xl md:text-3xl font-bold text-primary dark:text-indigo-400 tracking-tight">
+              FreebieFlow
+            </h1>
+          </div>
           <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
             {isDarkMode ? <SunIcon /> : <MoonIcon />}
           </button>
         </div>
       </header>
 
-      <main className="container mx-auto p-4 md:p-6">
-        <ServiceList 
-          services={sortedServices} 
-          onToggleUsed={handleToggleUsed} 
-          onDelete={handleDeleteService} 
-          onEdit={handleEditService}
-        />
+      <main className="container mx-auto p-4 md:p-6 flex-grow">
+        {view === 'main' && (
+          <ServiceList 
+            services={sortedServices} 
+            onToggleUsed={handleToggleUsed} 
+            onDelete={handleDeleteService} 
+            onEdit={handleEditService}
+          />
+        )}
+        {view === 'privacy' && (
+          <PrivacyPolicy onBack={() => setView('main')} />
+        )}
       </main>
 
-      <button
-        onClick={openAddModal}
-        className="fixed bottom-8 right-8 bg-primary hover:bg-indigo-700 text-white rounded-full p-4 shadow-lg transform hover:scale-110 transition-transform duration-200 z-20"
-        aria-label="Add new service"
-      >
-        <PlusIcon />
-      </button>
+      {view === 'main' && (
+        <button
+          onClick={openAddModal}
+          className="fixed bottom-20 right-8 bg-primary hover:bg-indigo-700 text-white rounded-full p-4 shadow-lg transform hover:scale-110 transition-transform duration-200 z-20"
+          aria-label="Add new service"
+        >
+          <PlusIcon />
+        </button>
+      )}
+
 
       <AddServiceModal
         isOpen={isModalOpen}
@@ -126,6 +138,12 @@ const App: React.FC = () => {
         onSave={handleSaveService}
         serviceToEdit={editingService}
       />
+
+      <footer className="w-full text-center p-4 text-sm text-gray-500 dark:text-gray-400">
+        <button onClick={() => setView('privacy')} className="hover:underline">
+          Privacy Policy
+        </button>
+      </footer>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const PlusIcon: React.FC = () => (
@@ -40,5 +39,25 @@ export const CalendarIcon: React.FC = () => (
 export const CreditCardIcon: React.FC = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+  </svg>
+);
+
+export const LogoIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <defs>
+        <linearGradient id="freebieflow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#4f46e5' }} />
+          <stop offset="100%" style={{ stopColor: '#10b981' }} />
+        </linearGradient>
+      </defs>
+      <path d="M128 24.6154C72.2462 24.6154 24.6154 72.2462 24.6154 128C24.6154 183.754 72.2462 231.385 128 231.385C183.754 231.385 231.385 183.754 231.385 128" stroke="url(#freebieflow-gradient)" strokeWidth="22" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      <path d="M211.692 74.4615L231.385 128L182.154 147.692" stroke="url(#freebieflow-gradient)" strokeWidth="22" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      <path d="M128 82.0513L147.692 128L128 173.949L108.308 128L128 82.0513Z" className="fill-primary dark:fill-indigo-400"/>
+    </svg>
+  );
+
+export const ChevronLeftIcon: React.FC = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
   </svg>
 );
