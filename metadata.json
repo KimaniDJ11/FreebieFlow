@@ -1,0 +1,5 @@
+{
+  "name": "FreebieFlow",
+  "description": "A web application to manage and track your free monthly credits for various services. It helps you keep an eye on renewal dates and credit usage with dynamic sorting and automatic resets.",
+  "requestFramePermissions": []
+}
