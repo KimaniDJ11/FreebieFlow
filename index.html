@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cdefs%3e%3clinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3e%3cstop offset='0%25' stop-color='%234f46e5'/%3e%3cstop offset='100%25' stop-color='%2310b981'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath d='M128 24.6C72.2 24.6 24.6 72.2 24.6 128s47.6 103.4 103.4 103.4 103.4-47.6 103.4-103.4' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='m211.7 74.5 19.7 53.5-49.2 19.7' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='M128 82.1 147.7 128 128 173.9 108.3 128z' fill='%234f46e5'/%3e%3c/svg%3e" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FreebieFlow</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary': '#4f46e5',
-              'secondary': '#10b981',
-              'light': '#f3f4f6',
-              'dark': '#1f2937',
-              'accent': '#ec4899',
-            },
-            animation: {
-              'fade-in': 'fade-in 0.3s ease-out',
-            },
-            keyframes: {
-              'fade-in': {
-                '0%': {
-                  opacity: '0',
-                  transform: 'translateY(10px)'
-                },
-                '100%': {
-                  opacity: '1',
-                  transform: 'translateY(0)'
-                },
-              }
-            }
-          },
-        },
-      }
-    </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>FreebieFlow Support</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fafafc; margin: 0; padding: 2em; }
+    .container { max-width: 600px; margin: auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #dde; padding: 2em; }
+    h1 { color: #175cff; }
+    .contact { margin: 1em 0; }
+    .faq { margin-top: 2em; }
+    .faq h2 { color: #333; margin-top: 1em; }
+    .faq p { color: #444; margin-bottom: 0.8em; }
+  </style>
 </head>
-  <body class="bg-light dark:bg-dark">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+  <div class="container">
+    <h1>FreebieFlow: App Support</h1>
+    <p>This is the official support page for <b>FreebieFlow</b>, your app for managing and tracking free recurring credits from online services.</p>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:support@freebieflow.app">support@freebieflow.app</a></p>
+    </div>
+    <div class="faq">
+      <h2>FAQ</h2>
+      <p><strong>Q: What does FreebieFlow do?</strong><br>A: It helps you keep track of monthly/weekly free credits/allowances from online platforms so you never lose value.</p>
+      <p><strong>Q: How can I reset my password?</strong><br>A: Go to app settings and tap "Reset Password." For issues, contact us using the email above.</p>
+      <p><strong>Q: Something isn’t working—how can I get help?</strong><br>A: Email us and we’ll get back to you as soon as possible (most replies in 1-2 business days).</p>
+    </div>
+    <div class="links" style="margin-top:2em;">
+      <h2>Helpful Resources</h2>
+      <ul>
+        <li><a href="https://github.com/KimaniDJ11/FreebieFlow">App Source Code (GitHub)</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
