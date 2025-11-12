@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cdefs%3e%3clinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3e%3cstop offset='0%25' stop-color='%234f46e5'/%3e%3cstop offset='100%25' stop-color='%2310b981'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath d='M128 24.6C72.2 24.6 24.6 72.2 24.6 128s47.6 103.4 103.4 103.4 103.4-47.6 103.4-103.4' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='m211.7 74.5 19.7 53.5-49.2 19.7' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='M128 82.1 147.7 128 128 173.9 108.3 128z' fill='%234f46e5'/%3e%3c/svg%3e" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FreebieFlow</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary': '#4f46e5',
-              'secondary': '#10b981',
-              'light': '#f3f4f6',
-              'dark': '#1f2937',
-              'accent': '#ec4899',
-            },
-            animation: {
-              'fade-in': 'fade-in 0.3s ease-out',
-            },
-            keyframes: {
-              'fade-in': {
-                '0%': {
-                  opacity: '0',
-                  transform: 'translateY(10px)'
-                },
-                '100%': {
-                  opacity: '1',
-                  transform: 'translateY(0)'
-                },
-              }
-            }
-          },
-        },
-      }
-    </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FreebieFlow Support</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #fafafc; margin: 0; padding: 2em; }
+        .container { max-width: 600px; margin: auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #ddd; padding: 2em; }
+        h1 { color: #175cff; }
+        .contact { margin: 1em 0; }
+        .faq { margin-top: 2em; }
+        .faq h2 { color: #333; margin-top: 1em; }
+        .faq p { color: #444; margin-bottom: 0.8em; }
+    </style>
 </head>
-  <body class="bg-light dark:bg-dark">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+    <div class="container">
+        <h1>FreebieFlow: App Support</h1>
+        <p>This is the official support page for <b>FreebieFlow</b>, a SwiftUI app that tracks services offering free credits or trials. It reminds you when renewals are due and keeps your "used" vs "active" services organized.</p>
+        
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:support@freebieflow.app">support@freebieflow.app</a></p>
+        </div>
+        
+        <div class="faq">
+            <h2>FAQ</h2>
+            
+            <p><strong>Q: What is FreebieFlow?</strong><br>
+            A: FreebieFlow is a SwiftUI app that tracks services offering free credits or trials. It reminds you when renewals are due and keeps your "used" vs "active" services organized.</p>
+            
+            <p><strong>Q: How do I add a new service?</strong><br>
+            A: Tap Add Service in the toolbar, fill in the service name, associated email, number of free credits, and the renewal date, then hit Save.</p>
+            
+            <p><strong>Q: Can I edit or delete a service later?</strong><br>
+            A: Yes. Open the service from the list, choose Edit, adjust the details, and save. Swipe left (or use context menus) to delete entries you no longer need.</p>
+            
+            <p><strong>Q: What does the "Used" toggle do?</strong><br>
+            A: Marking a service as "Used" moves it to the Used section so you can focus on remaining freebies. When the renewal date passes, FreebieFlow automatically resets it to Active with the next renewal date.</p>
+            
+            <p><strong>Q: How do I import data from the web app?</strong><br>
+            A: Export the JSON file from the web version, open FreebieFlow, and use Import Data from the toolbar. The app validates entries and saves successful imports.</p>
+            
+            <p><strong>Q: I'm offline—will my changes sync later?</strong><br>
+            A: Absolutely. FreebieFlow notes pending changes while offline and syncs once you regain connectivity. The banner at the bottom shows sync status and errors.</p>
+            
+            <p><strong>Q: How can I request a feature or report a bug?</strong><br>
+            A: Open a GitHub issue with the "Feature Request" or "Bug Report" template. Include device model, iOS version, and steps to reproduce.</p>
+        </div>
+        
+        <div class="links" style="margin-top:2em;">
+            <h2>Helpful Resources</h2>
+            <ul>
+                <li><a href="https://github.com/KimaniDJ11/FreebieFlow">App Source Code (GitHub)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
