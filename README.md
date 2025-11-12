@@ -92,6 +92,12 @@ Because this app uses ES modules (`import`), you need to serve the files from a 
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page. A major area for future improvement would be adding an optional cloud sync feature using a service like Firebase.
 
+## 📧 Support
+
+For questions, bug reports, or feature requests, please contact:
+- **Email:** freebieflow@iriedinamik.org
+- **GitHub Issues:** [Report an issue](https://github.com/KimaniDJ11/FreebieFlow/issues)
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).

@@ -92,7 +92,7 @@ We may update this Privacy Policy from time to time. We will post the new policy
 ## 13. Contact Us
 
 For questions, requests, or privacy concerns, please contact:
-- Email: replace-with-your-contact@example.com
+- Email: freebieflow@iriedinamik.org
 - GitHub: https://github.com/KimaniDJ11
 
 Please include “Privacy Request” in the subject line of emails about privacy rights.
