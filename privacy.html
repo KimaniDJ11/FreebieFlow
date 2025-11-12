@@ -1,53 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cdefs%3e%3clinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3e%3cstop offset='0%25' stop-color='%234f46e5'/%3e%3cstop offset='100%25' stop-color='%2310b981'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath d='M128 24.6C72.2 24.6 24.6 72.2 24.6 128s47.6 103.4 103.4 103.4 103.4-47.6 103.4-103.4' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='m211.7 74.5 19.7 53.5-49.2 19.7' stroke='url(%23g)' stroke-width='22' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='M128 82.1 147.7 128 128 173.9 108.3 128z' fill='%234f46e5'/%3e%3c/svg%3e" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - FreebieFlow</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary': '#4f46e5',
-              'secondary': '#10b981',
-              'light': '#f3f4f6',
-              'dark': '#1f2937',
-              'accent': '#ec4899',
-            },
-            animation: {
-              'fade-in': 'fade-in 0.3s ease-out',
-            },
-            keyframes: {
-              'fade-in': {
-                '0%': {
-                  opacity: '0',
-                  transform: 'translateY(10px)'
-                },
-                '100%': {
-                  opacity: '1',
-                  transform: 'translateY(0)'
-                },
-              }
-            }
-          },
-        },
-      }
-    </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
+            background: #f3f4f6; 
+            margin: 0; 
+            padding: 2em; 
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            background: #fff; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+            padding: 2em; 
+        }
+        h1 { 
+            color: #4f46e5; 
+            margin-bottom: 0.5em;
+        }
+        h2 { 
+            color: #333; 
+            margin-top: 1.5em; 
+            margin-bottom: 0.5em;
+            font-size: 1.5em;
+        }
+        h3 { 
+            color: #444; 
+            margin-top: 1.2em; 
+            font-size: 1.2em;
+        }
+        p { 
+            color: #555; 
+            margin-bottom: 1em; 
+        }
+        .last-updated { 
+            color: #888; 
+            font-size: 0.9em; 
+            margin-bottom: 2em; 
+        }
+        a { 
+            color: #4f46e5; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            color: #4f46e5;
+            font-weight: 500;
+        }
+        ul {
+            margin-left: 1.5em;
+        }
+        li {
+            margin-bottom: 0.5em;
+            color: #555;
+        }
+    </style>
 </head>
-  <body class="bg-light dark:bg-dark">
-    <div id="root"></div>
-    <script type="module" src="/privacy.tsx"></script>
-  </body>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to App</a>
+        
+        <h1>Privacy Policy for FreebieFlow</h1>
+        <p class="last-updated">Last Updated: November 2025</p>
+
+        <p>Welcome to FreebieFlow. This Privacy Policy explains how we handle your information when you use our web application. Your privacy is critically important to us.</p>
+
+        <h3>1. No Data Collection</h3>
+        <p>FreebieFlow is designed with privacy as a core principle. We do not collect, store, or transmit any of your personal information. The application does not have a backend server, and we do not have access to any data you enter.</p>
+
+        <h3>2. Local Data Storage</h3>
+        <p>All the data you enter into FreebieFlow, including service names, email addresses, credit amounts, and renewal dates, is stored exclusively on your own device within your web browser's local storage. This data never leaves your computer or mobile device. If you clear your browser's cache or data, all your FreebieFlow entries will be permanently deleted.</p>
+
+        <h3>3. Use of Information</h3>
+        <p>Since we do not collect any information, we do not use it for any purpose. The data you enter is used only by the application on your device to provide you with the service tracking functionality.</p>
+
+        <h3>4. Third-Party Services</h3>
+        <p>FreebieFlow does not integrate with any third-party services for analytics, advertising, or any other purpose. Your data stays completely private on your device.</p>
+
+        <h3>5. Changes to This Privacy Policy</h3>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+        <h3>6. Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <ul>
+            <li>Email: <a href="mailto:freebieflow@iriedinamik.org">freebieflow@iriedinamik.org</a></li>
+            <li>GitHub: <a href="https://github.com/KimaniDJ11/FreebieFlow">https://github.com/KimaniDJ11/FreebieFlow</a></li>
+        </ul>
+
+        <p style="margin-top: 2em; padding-top: 2em; border-top: 1px solid #e5e7eb;">
+            <a href="support.html">Support Page</a> | 
+            <a href="index.html">Back to App</a>
+        </p>
+    </div>
+</body>
 </html>
